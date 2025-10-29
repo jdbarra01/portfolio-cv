@@ -1,97 +1,200 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CV Interactivo - José Daniel Barra</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>José Daniel Barra - QA Automation Leader</title>
 
   <!-- Fuente e íconos -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a2e0b1b6f4.js" crossorigin="anonymous"></script>
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom right, #0f172a, #1e293b);
-      color: #f1f5f9;
+    :root {
+      --primary: #00b4d8;
+      --secondary: #48cae4;
+      --bg-dark: #0f172a;
+      --bg-card: rgba(255, 255, 255, 0.05);
+      --text-light: #e2e8f0;
+      --text-gray: #94a3b8;
+    }
+
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
     }
+
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: var(--text-light);
+      padding: 40px 0;
+    }
+
     .container {
-      max-width: 900px;
-      margin: 3rem auto;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 1.5rem;
-      padding: 2rem;
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+      max-width: 950px;
+      margin: auto;
+      background: var(--bg-card);
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      padding: 40px;
+      box-shadow: 0 0 50px rgba(0,0,0,0.4);
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: transform 0.3s ease;
     }
-    h2 {
-      border-bottom: 2px solid rgba(255, 255, 255, 0.15);
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
+
+    .container:hover {
+      transform: translateY(-3px);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+    }
+
+    header p.role {
+      font-size: 1.1rem;
+      color: var(--secondary);
+      margin-top: 6px;
+    }
+
+    header .contact {
+      margin-top: 10px;
+      color: var(--text-gray);
+      font-size: 0.9rem;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h2 {
+      font-size: 1.4rem;
+      color: var(--primary);
+      border-left: 4px solid var(--secondary);
+      padding-left: 10px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .profile p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+      color: var(--text-light);
+    }
+
+    .card {
+      background: rgba(255,255,255,0.03);
+      border-radius: 12px;
+      padding: 18px 24px;
+      margin-bottom: 16px;
+      border-left: 3px solid var(--primary);
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .card:hover {
+      background: rgba(255,255,255,0.08);
+      transform: translateX(5px);
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      color: var(--secondary);
+    }
+
+    .card p {
+      color: var(--text-gray);
+      font-size: 0.9rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: "▹";
+      color: var(--secondary);
+      margin-right: 8px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-gray);
+      margin-top: 40px;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        padding: 25px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 
 <body>
   <div class="container">
+
     <!-- Encabezado -->
-    <header class="text-center mb-8">
-      <h1 class="text-4xl font-semibold text-blue-400">José Daniel Barra</h1>
-      <p class="text-gray-300">Ingeniero Líder en Automatización QA | Arquitectura de Frameworks</p>
-      <p class="text-gray-400 mt-2 text-sm">
+    <header>
+      <h1>José Daniel Barra</h1>
+      <p class="role">QA Automation Leader | Framework Architect</p>
+      <p class="contact">
         <i class="fas fa-envelope"></i> jose.barra@example.com &nbsp; | &nbsp;
         <i class="fas fa-phone"></i> +56 9 1234 5678 &nbsp; | &nbsp;
         <i class="fab fa-linkedin"></i> linkedin.com/in/josedanielbarra
       </p>
     </header>
 
-    <!-- Sección Perfil -->
-    <div class="profile bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg border border-white/20 mb-10">
-      <h2 class="text-2xl font-semibold text-blue-400 mb-3 flex items-center gap-2">
-        <i class="fas fa-user-cog text-blue-500"></i> Sobre mí
-      </h2>
-
-      <p class="text-gray-100 leading-relaxed mb-3">
+    <!-- Perfil -->
+    <section class="profile">
+      <h2><i class="fas fa-user-cog"></i> Sobre mí</h2>
+      <p>
         Soy un <strong>Ingeniero Líder en Automatización QA y Arquitectura de Frameworks</strong> con más de una década de experiencia diseñando y ejecutando estrategias de automatización para 
         <strong>aplicaciones Web, Móviles y API</strong> en proyectos de gran envergadura.
       </p>
-
-      <p class="text-gray-100 leading-relaxed mb-3">
+      <p>
         He <strong>liderado equipos técnicos</strong>, diseñado frameworks <strong>E2E integrados con CI/CD</strong> y aplicado metodologías 
         <strong>Agile (Scrum y Kanban)</strong> para elevar la calidad, eficiencia y velocidad de entrega del software. 
         Mi experiencia ha permitido reducir significativamente los <strong>tiempos de lanzamiento al mercado</strong> en sectores de alta transaccionalidad como 
         <strong>Banca y Retail</strong>.
       </p>
-
-      <p class="text-gray-100 leading-relaxed">
+      <p>
         Actualmente busco una <strong>posición estratégica</strong> donde pueda impulsar la <strong>excelencia en software</strong> mediante la implementación de 
         <strong>soluciones de automatización robustas, escalables y efectivas</strong>.
       </p>
-    </div>
+    </section>
 
     <!-- Experiencia -->
-    <section class="experience mb-10">
-      <h2 class="text-2xl font-semibold text-blue-400 mb-4 flex items-center gap-2">
-        <i class="fas fa-briefcase text-blue-500"></i> Experiencia Profesional
-      </h2>
-      <div class="mb-4">
-        <h3 class="text-lg font-semibold">Líder de Automatización QA - Banco Estado</h3>
-        <p class="text-gray-400 text-sm">2021 - Presente</p>
-        <ul class="list-disc list-inside text-gray-200 mt-2">
+    <section class="experience">
+      <h2><i class="fas fa-briefcase"></i> Experiencia Profesional</h2>
+
+      <div class="card">
+        <h3>Líder de Automatización QA - Banco Estado</h3>
+        <p>2021 - Presente</p>
+        <ul>
           <li>Diseño e implementación de frameworks híbridos para pruebas Web y API.</li>
           <li>Integración con Jenkins, GitLab CI y reportes automáticos con Allure.</li>
           <li>Gestión y capacitación de un equipo de 8 QA Engineers en metodologías ágiles.</li>
         </ul>
       </div>
 
-      <div>
-        <h3 class="text-lg font-semibold">QA Automation Engineer - Walmart Tech</h3>
-        <p class="text-gray-400 text-sm">2017 - 2021</p>
-        <ul class="list-disc list-inside text-gray-200 mt-2">
+      <div class="card">
+        <h3>QA Automation Engineer - Walmart Tech</h3>
+        <p>2017 - 2021</p>
+        <ul>
           <li>Automatización de flujos críticos en aplicaciones móviles con Appium y Selenium Grid.</li>
           <li>Optimización del pipeline de pruebas reduciendo un 35% los tiempos de ejecución.</li>
           <li>Implementación de pruebas E2E con integración a entornos de staging.</li>
@@ -100,35 +203,36 @@
     </section>
 
     <!-- Educación -->
-    <section class="education mb-10">
-      <h2 class="text-2xl font-semibold text-blue-400 mb-4 flex items-center gap-2">
-        <i class="fas fa-graduation-cap text-blue-500"></i> Educación
-      </h2>
-      <div class="mb-4">
-        <h3 class="text-lg font-semibold">Ingeniería en Informática</h3>
-        <p class="text-gray-400 text-sm">Duoc UC - Titulado 2012</p>
+    <section class="education">
+      <h2><i class="fas fa-graduation-cap"></i> Educación</h2>
+
+      <div class="card">
+        <h3>Ingeniería en Informática</h3>
+        <p>Duoc UC - Titulado 2012</p>
       </div>
-      <div>
-        <h3 class="text-lg font-semibold">Diplomado en Gestión de la Innovación y Transformación Digital</h3>
-        <p class="text-gray-400 text-sm">Universidad de Chile - 2023</p>
+
+      <div class="card">
+        <h3>Diplomado en Gestión de la Innovación y Transformación Digital</h3>
+        <p>Universidad de Chile - 2023</p>
       </div>
     </section>
 
-    <!-- Proyectos destacados -->
-    <section class="projects mb-10">
-      <h2 class="text-2xl font-semibold text-blue-400 mb-4 flex items-center gap-2">
-        <i class="fas fa-project-diagram text-blue-500"></i> Proyectos Destacados
-      </h2>
-      <ul class="list-disc list-inside text-gray-200">
-        <li>Framework modular para automatización de microservicios REST con Rest-Assured y Gradle.</li>
-        <li>Implementación de pruebas móviles paralelas con Appium, Selenium Grid y Docker.</li>
-        <li>Integración de reportes de métricas QA en dashboards con Grafana y Prometheus.</li>
-      </ul>
+    <!-- Proyectos -->
+    <section class="projects">
+      <h2><i class="fas fa-project-diagram"></i> Proyectos Destacados</h2>
+
+      <div class="card">
+        <ul>
+          <li>Framework modular para automatización de microservicios REST con Rest-Assured y Gradle.</li>
+          <li>Pruebas móviles paralelas con Appium, Selenium Grid y Docker.</li>
+          <li>Reportes de métricas QA con integración a Grafana y Prometheus.</li>
+        </ul>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center text-gray-400 text-sm mt-8">
-      <p>© 2025 José Daniel Barra — Todos los derechos reservados</p>
+    <footer>
+      © 2025 José Daniel Barra — Todos los derechos reservados
     </footer>
   </div>
 </body>
