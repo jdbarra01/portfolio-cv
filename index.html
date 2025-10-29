@@ -1,164 +1,184 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>CV Interactivo - José Daniel Barra</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/a2d04b0f5f.js" crossorigin="anonymous"></script>
-<style>
-:root {
-  --primary: #0057a4;
-  --secondary: #00a8e8;
-  --bg: #f4f6f8;
-  --text: #333;
-  --light: #fff;
-}
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="CV y portfolio de José Daniel Barra — Ingeniero QA especializado en automatización de pruebas (Selenium, Playwright, Appium, APIs)." />
+  <title>José Daniel Barra — CV & Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2d04b0f5f.js" crossorigin="anonymous"></script>
+  <style>
+    :root{
+      --bg:#f6f8fb; --card:#ffffff; --primary:#0b63b6; --accent:#00a8e8; --muted:#667085; --text:#0f1724; --radius:12px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased; line-height:1.5}
+    a{color:inherit}
 
-/* Header */
-header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: var(--light); text-align: center; padding: 60px 20px; border-bottom: 5px solid #004880; }
-header h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 10px; }
-header p { font-size: 1.2rem; opacity: 0.9; }
+    /* Layout */
+    header{background:linear-gradient(135deg,var(--primary),var(--accent)); color:#fff;padding:48px 20px 36px}
+    .container{max-width:1100px;margin:-40px auto 48px;padding:24px}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:0 10px 30px rgba(16,24,40,0.08);overflow:hidden}
 
-/* Container */
-main { max-width: 1100px; margin: 40px auto; background: var(--light); border-radius: 15px; padding: 40px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:24px;padding:28px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr;padding:20px}}
 
-section { margin-bottom: 40px; }
-h2 { color: var(--primary); border-left: 6px solid var(--secondary); padding-left: 10px; font-size: 1.5rem; margin-bottom: 20px; display: flex; align-items: center; cursor: pointer; }
-h2 i { margin-right: 10px; }
+    /* Left column */
+    .section{padding:8px 0}
+    h1{font-size:1.85rem;margin-bottom:6px}
+    .subtitle{opacity:.95;font-size:1.02rem}
+    h2{font-size:1.1rem;color:var(--primary);margin:6px 0 12px;display:flex;align-items:center;gap:10px}
+    h2 .icon{color:var(--accent)}
 
-/* Perfil */
-.perfil p { font-size: 1.05rem; }
+    .profile p{font-size:1rem;color:var(--muted)}
 
-/* Experiencia */
-.exp-item { background: #f9fbfd; padding: 15px 20px; border-left: 4px solid var(--primary); margin-bottom: 15px; border-radius: 8px; transition: all 0.3s; }
-.exp-item:hover { transform: translateY(-3px); background: #eef5fa; }
-.exp-item strong { display: block; color: var(--primary); margin-bottom:5px; }
-.exp-item ul { margin-top: 8px; padding-left: 20px; }
-.exp-item li { margin-bottom: 8px; }
+    .exp{display:flex;flex-direction:column;gap:12px}
+    .job{border-left:4px solid var(--primary);background:#fbfdff;padding:14px;border-radius:8px}
+    .job .role{font-weight:600;color:var(--text)}
+    .job ul{margin-top:8px;padding-left:18px;color:var(--muted)}
 
-/* Skills */
-.skills { display: flex; flex-wrap: wrap; gap: 10px; }
-.skills span { background: var(--primary); color: white; padding: 8px 14px; border-radius: 20px; font-size: 0.9rem; transition: all 0.3s; }
-.skills span:hover { background: var(--secondary); transform: scale(1.1); }
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:linear-gradient(180deg,var(--primary),#0a4c89);color:#fff;padding:7px 12px;border-radius:999px;font-size:.88rem}
 
-/* Proyectos */
-.project { border: 1px solid #ddd; border-radius: 10px; padding: 20px; margin-bottom: 15px; transition: all 0.3s; }
-.project:hover { transform: translateY(-4px); border-color: var(--secondary); box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
-.project a { color: var(--primary); text-decoration: none; font-weight: 600; font-size: 1.1rem; }
-.project a:hover { color: var(--secondary); }
+    /* Right column (aside) */
+    aside{padding:20px;background:linear-gradient(180deg,rgba(10,20,40,0.03),transparent)}
+    .photo{width:100%;height:140px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--primary));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    .contact{margin-top:14px}
+    .contact a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);padding:8px 6px;border-radius:8px}
+    .contact a:hover{color:var(--primary)}
 
-/* Contacto */
-.contact ul { list-style: none; padding: 0; }
-.contact li { margin: 8px 0; font-size: 1rem; }
-.contact i { color: var(--primary); margin-right: 8px; }
-.contact a { color: var(--text); text-decoration: none; }
-.contact a:hover { color: var(--secondary); text-decoration: underline; }
+    .projects{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+    .project{padding:10px;border-radius:8px;border:1px solid #eef3fb}
 
-/* Footer */
-footer { text-align: center; padding: 25px; font-size: 0.9rem; color: #555; }
+    footer{padding:20px;text-align:center;color:var(--muted);font-size:.9rem}
 
-/* Responsive */
-@media (max-width: 768px) {
-  header h1 { font-size: 2rem; }
-  main { padding: 25px; }
-  .skills span { font-size: 0.85rem; }
-}
-</style>
+    /* Utilities */
+    .actions{display:flex;gap:8px;margin-top:12px}
+    .btn{background:var(--primary);color:#fff;padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn.secondary{background:#edf8ff;color:var(--primary);border:1px solid #d8efff}
+
+    /* Print styles */
+    @media print{body{background:#fff}header{display:none}.container{max-width:100%}.grid{grid-template-columns:1fr}}
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"José Daniel Barra","jobTitle":"Ingeniero QA - Automatización","url":"https://github.com/jdbarra01","sameAs":["https://linkedin.com/in/jdbarra01","https://github.com/jdbarra01"]}
+  </script>
 </head>
 <body>
-<header>
-  <h1>José Daniel Barra</h1>
-  <p>Ingeniero QA | Especialista en Automatización de Pruebas</p>
-</header>
-<main>
+  <a class="skip-link" href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">Saltar al contenido</a>
+  <header role="banner">
+    <div class="container" style="text-align:center">
+      <h1 style="color:#fff;margin-bottom:6px">José Daniel Barra</h1>
+      <div class="subtitle">Ingeniero QA — Especialista en Automatización (Selenium · Playwright · Appium · APIs)</div>
+    </div>
+  </header>
 
-<!-- Perfil -->
-<section class="perfil">
-  <h2><i class="fas fa-user"></i> Perfil Profesional</h2>
-  <p>Ingeniero QA con más de 10 años de experiencia en <strong>automatización de pruebas</strong>, liderando equipos y proyectos en entornos <strong>web, móviles y API</strong>. Experto en mejorar la cobertura y eficiencia de pruebas mediante CI/CD, frameworks sólidos y metodologías Agile.</p>
-</section>
+  <main id="main" class="container">
+    <div class="card">
+      <div class="grid">
+        <section aria-labelledby="sobre-mi">
+          <div style="padding:6px 6px 0">
+            <h2 id="sobre-mi"><span class="icon">👤</span> Perfil profesional</h2>
+            <div class="profile">
+              <p>Ingeniero QA con más de 10 años de experiencia en automatización de pruebas para aplicaciones web, móviles y APIs. He liderado equipos y diseñado frameworks E2E integrados con CI/CD para mejorar la detección temprana de defectos y acelerar entregas en entornos Agile.</p>
+            </div>
+          </div>
 
-<!-- Experiencia -->
-<section>
-  <h2><i class="fas fa-briefcase"></i> Experiencia Laboral</h2>
+          <div class="section">
+            <h2><span class="icon">💼</span> Experiencia</h2>
+            <div class="exp">
+              <article class="job" aria-label="Banco Ripley">
+                <div class="role">Banco Ripley — QA Lead de Automatización (mar. 2021 – oct. 2025)</div>
+                <ul>
+                  <li>Diseño e implementación de framework E2E para Web, API y Móvil con cobertura alta y mantenible.</li>
+                  <li>Integración de pipelines CI/CD que redujeron tiempos de retroalimentación en ~40%.</li>
+                  <li>Liderazgo técnico de equipo internacional + formación en buenas prácticas.</li>
+                </ul>
+              </article>
 
-  <div class="exp-item">
-    <strong>Banco Ripley | QA Lead de Automatización (mar. 2021 – oct. 2025)</strong>
-    <ul>
-      <li>Diseñé y lideré la implementación de un Framework de Automatización E2E para API, Web y Móvil, alcanzando una cobertura >85% en el sitio transaccional.</li>
-      <li>Establecí y optimicé procesos CI/CD, reduciendo en un 40% el tiempo de retroalimentación post-despliegue.</li>
-      <li>Estandaricé procedimientos de certificación de calidad, mejorando la detección de defectos críticos antes del Go-Live.</li>
-      <li>Lideré y formé un equipo de más de 12 automatizadores en Chile y Perú, promoviendo buenas prácticas y metodologías Agile.</li>
-    </ul>
-  </div>
+              <article class="job" aria-label="TCS">
+                <div class="role">Tata Consultancy Services — QA Lead (jun. 2019 – mar. 2021)</div>
+                <ul>
+                  <li>Arquitectura de automatización para clientes críticos (Selenium, Appium, Postman).</li>
+                  <li>Implementación de estándares de código y capacitación interna.</li>
+                </ul>
+              </article>
 
-  <div class="exp-item">
-    <strong>Tata Consultancy Services (TCS) | QA Lead de Automatización (jun. 2019 – mar. 2021)</strong>
-    <ul>
-      <li>Liderazgo en proyecto de automatización para Transbank, definiendo arquitectura y estándares de código para escalabilidad y mantenibilidad.</li>
-      <li>Implementación de soluciones automatizadas Web (Selenium), móviles (Appium) y API (Postman), incrementando la eficiencia funcional >50%.</li>
-      <li>Diseño y ejecución de programas de capacitación interna en Selenium WebDriver y Appium.</li>
-    </ul>
-  </div>
+              <article class="job" aria-label="TSoft Chile">
+                <div class="role">TSoft Chile — Consultor Automatizador (ene. 2018 – jun. 2019)</div>
+                <ul>
+                  <li>Desarrollo de scripts y soluciones de automatización para entidades financieras.</li>
+                </ul>
+              </article>
+            </div>
+          </div>
 
-  <div class="exp-item">
-    <strong>TSoft Chile | Consultor Automatizador (ene. 2018 – jun. 2019)</strong>
-    <ul>
-      <li>Diseñé y desarrollé scripts de automatización con Selenium, Appium y UFT para optimizar procesos funcionales.</li>
-      <li>Participé en proyectos de automatización para clientes de alto perfil como Banco de Crédito e Inversiones, Banco de Chile y BNP-Cardif.</li>
-    </ul>
-  </div>
-</section>
+          <div class="section">
+            <h2><span class="icon">🛠️</span> Habilidades</h2>
+            <div class="skills">
+              <span class="chip">Java</span>
+              <span class="chip">Python</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">Selenium</span>
+              <span class="chip">Playwright</span>
+              <span class="chip">Appium</span>
+              <span class="chip">Postman / APIs</span>
+              <span class="chip">Jenkins · GitHub Actions</span>
+              <span class="chip">Cucumber</span>
+              <span class="chip">JMeter · Locust</span>
+            </div>
+          </div>
 
-<!-- Skills -->
-<section>
-  <h2><i class="fas fa-tools"></i> Habilidades Técnicas</h2>
-  <div class="skills">
-    <span>Java</span><span>Python</span><span>TypeScript</span><span>Selenium</span><span>Playwright</span>
-    <span>Appium</span><span>Rest-Assured</span><span>Postman</span><span>JMeter</span><span>Jenkins</span>
-    <span>GitHub Actions</span><span>Gradle</span><span>Maven</span><span>Scrum</span><span>Kanban</span>
-    <span>Cucumber</span>
-  </div>
-</section>
+          <div class="section">
+            <h2><span class="icon">🎓</span> Educación</h2>
+            <ul style="color:var(--muted);padding-left:18px">
+              <li>Titulado en Ingeniería en Computación — Universidad La Araucana</li>
+              <li>Diplomado en liderazgo y gestión de herramientas ágiles</li>
+            </ul>
+          </div>
 
-<!-- Educación -->
-<section>
-  <h2><i class="fas fa-graduation-cap"></i> Educación</h2>
-  <ul>
-    <li>🎓 Diplomado en Automatización de Pruebas de Software</li>
-    <li>🎓 Ingeniería en [Tu carrera] – [Institución], [Año de titulación]</li>
-  </ul>
-</section>
+          <div class="section">
+            <h2><span class="icon">📁</span> Proyectos destacados</h2>
+            <div class="projects">
+              <div class="project"><a href="https://github.com/jdbarra01/pwa-playwright" target="_blank" rel="noopener">pwa-playwright</a><div style="color:var(--muted);font-size:.95rem">Framework de automatización para PWAs con Playwright.</div></div>
+              <div class="project"><a href="https://github.com/jdbarra01/locust-performance" target="_blank" rel="noopener">locust-performance</a><div style="color:var(--muted);font-size:.95rem">Pruebas de carga y rendimiento con Locust.</div></div>
+            </div>
+          </div>
+        </section>
 
-<!-- Proyectos -->
-<section>
-  <h2><i class="fas fa-code"></i> Proyectos Destacados</h2>
-  <div class="project">
-    <a href="https://github.com/jdbarra01/pwa-playwright" target="_blank">pwa-playwright</a>
-    <p>Framework de automatización para aplicaciones web progresivas con Playwright.</p>
-  </div>
-  <div class="project">
-    <a href="https://github.com/jdbarra01/locust-performance" target="_blank">locust-performance</a>
-    <p>Pruebas de performance y carga con Locust para APIs y servicios web.</p>
-  </div>
-</section>
+        <aside aria-labelledby="contacto">
+          <div style="padding:4px 0">
+            <div class="photo">JDB</div>
+            <div style="margin-top:12px">
+              <div id="contacto"><h2><span class="icon">✉️</span> Contacto</h2></div>
+              <div class="contact">
+                <div><a href="mailto:jdbarra@gmail.com"><i class="fas fa-envelope"></i> jdbarra@gmail.com</a></div>
+                <div><a href="https://linkedin.com/in/jdbarra01" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> linkedin.com/in/jdbarra01</a></div>
+                <div><a href="https://github.com/jdbarra01" target="_blank" rel="noopener"><i class="fab fa-github"></i> github.com/jdbarra01</a></div>
+              </div>
+            </div>
 
-<!-- Contacto -->
-<section class="contact">
-  <h2><i class="fas fa-envelope"></i> Contacto</h2>
-  <ul>
-    <li><i class="fas fa-at"></i> <a href="mailto:jdbarra01@example.com">jdbarra01@example.com</a></li>
-    <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/jdbarra01" target="_blank">linkedin.com/in/jdbarra01</a></li>
-    <li><i class="fab fa-github"></i> <a href="https://github.com/jdbarra01" target="_blank">github.com/jdbarra01</a></li>
-  </ul>
-</section>
-</main>
+            <div style="margin-top:12px">
+              <div style="font-weight:600;margin-bottom:8px">Acciones</div>
+              <div class="actions">
+                <a class="btn" href="/Jose_Daniel_Barra_CV.pdf" download>Descargar CV (PDF)</a>
+                <a class="btn secondary" href="https://github.com/jdbarra01" target="_blank" rel="noopener">Ver GitHub</a>
+              </div>
+            </div>
 
-<footer>
-  © 2025 José Daniel Barra – CV interactivo & portfolio profesional.
-</footer>
+            <div style="margin-top:18px">
+              <div style="font-weight:600;margin-bottom:8px">Herramientas</div>
+              <div style="color:var(--muted);font-size:.95rem">Selenium · Playwright · Appium · Postman · Jenkins · GitHub Actions</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <footer>
+      © 2025 José Daniel Barra — CV interactivo & portfolio profesional.
+    </footer>
+  </main>
 </body>
 </html>
