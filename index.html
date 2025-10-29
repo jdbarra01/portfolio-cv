@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Interactivo - José Daniel Barra</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'Roboto', sans-serif; background: #f4f4f9; color: #333; line-height:1.6; }
+        
+        /* Header */
+        header { background:#0a3d62; color:#fff; text-align:center; padding:50px 20px; transition: all 0.3s; }
+        header h1 { font-size:2.5em; margin-bottom:10px; }
+        header p { font-size:1.2em; }
+        header:hover { background:#083360; }
+
+        main { max-width:1000px; margin:30px auto; background:#fff; padding:30px; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.1); }
+
+        section { margin-bottom:25px; }
+        h2 { color:#0a3d62; margin-bottom:15px; border-bottom:2px solid #0a3d62; display:inline-block; padding-bottom:5px; cursor:pointer; }
+        ul { list-style:none; padding-left:0; }
+        li { margin-bottom:12px; }
+
+        /* Skills badges */
+        .skills span {
+            display:inline-block;
+            background:#0a3d62;
+            color:#fff;
+            padding:6px 12px;
+            border-radius:20px;
+            margin:5px 5px 0 0;
+            font-size:0.9em;
+            transition: transform 0.2s, background 0.3s;
+            cursor:pointer;
+        }
+        .skills span:hover {
+            background:#083360;
+            transform: scale(1.1);
+        }
+
+        /* Projects interactive */
+        .project a { font-weight:bold; color:#0a3d62; transition: color 0.3s; }
+        .project a:hover { color:#083360; }
+        .project p { font-size:0.95em; color:#555; }
+
+        /* Collapsible content */
+        .collapsible-content { display:none; margin-top:10px; padding-left:10px; border-left:3px solid #0a3d62; }
+
+        /* Contact */
+        .contact li { margin-bottom:8px; }
+
+        /* Footer */
+        footer { text-align:center; padding:20px; font-size:0.9em; color:#555; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>José Daniel Barra</h1>
+        <p>Ingeniero QA | Especialista en Automatización de Pruebas</p>
+    </header>
+
+    <main>
+        <!-- Perfil -->
+        <section>
+            <h2 onclick="toggleSection(this)">Perfil Profesional</h2>
+            <div class="collapsible-content" style="display:block;">
+                <p>Ingeniero QA con más de 10 años de experiencia en <strong>automatización de pruebas</strong>, liderando proyectos y equipos en entornos <strong>web, móviles y API</strong>. Apasionado por la innovación, mejora continua y eficiencia en los procesos de testing.</p>
+            </div>
+        </section>
+
+        <!-- Experiencia -->
+        <section>
+            <h2 onclick="toggleSection(this)">Experiencia Laboral</h2>
+            <div class="collapsible-content">
+                <ul>
+                    <li>
+                        <strong>Seiza SpA | Líder de QA (2020 - 2023)</strong><br>
+                        Lideré un equipo de QA en proyectos de automatización web y mobile con <strong>Playwright y Selenium</strong>. Implementé pipelines CI/CD en Jenkins y aumenté la cobertura automatizada en <strong>40%</strong>.
+                    </li>
+                    <li>
+                        <strong>Banco Ripley Chile | QA Analyst (2018 - 2020)</strong><br>
+                        Ejecución de pruebas automatizadas y manuales en aplicaciones web y API usando <strong>Postman, Selenium y JMeter</strong>. Trabajo en equipos ágiles aplicando Scrum y Kanban.
+                    </li>
+                    <li>
+                        <strong>Tata Consultancy Services | QA Automation Engineer (2015 - 2018)</strong><br>
+                        Desarrollo y mantenimiento de frameworks de automatización en Java, integración en CI/CD y reporte de métricas de calidad.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section>
+            <h2 onclick="toggleSection(this)">Habilidades Técnicas</h2>
+            <div class="collapsible-content">
+                <div class="skills">
+                    <span>Java</span>
+                    <span>Python</span>
+                    <span>TypeScript</span>
+                    <span>Selenium</span>
+                    <span>Playwright</span>
+                    <span>Appium</span>
+                    <span>Rest-Assured</span>
+                    <span>Postman</span>
+                    <span>JMeter</span>
+                    <span>Jenkins</span>
+                    <span>GitHub Actions</span>
+                    <span>Gradle</span>
+                    <span>Maven</span>
+                    <span>Scrum</span>
+                    <span>Kanban</span>
+                    <span>Cucumber</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Educación -->
+        <section>
+            <h2 onclick="toggleSection(this)">Educación</h2>
+            <div class="collapsible-content">
+                <ul>
+                    <li>Diplomado en Automatización de Pruebas de Software</li>
+                    <li>Ingeniería en [tu carrera] – [Institución], [Año de titulación]</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Proyectos -->
+        <section>
+            <h2 onclick="toggleSection(this)">Proyectos Destacados</h2>
+            <div class="collapsible-content">
+                <ul>
+                    <li class="project">
+                        <a href="https://github.com/jdbarra01/pwa-playwright" target="_blank">pwa-playwright</a>
+                        <p>Framework de automatización para aplicaciones web progresivas con Playwright.</p>
+                    </li>
+                    <li class="project">
+                        <a href="https://github.com/jdbarra01/locust-performance" target="_blank">locust-performance</a>
+                        <p>Pruebas de performance y carga con Locust para APIs y servicios web.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section>
+            <h2 onclick="toggleSection(this)">Contacto</h2>
+            <div class="collapsible-content">
+                <ul class="contact">
+                    <li>Email: jdbarra01@example.com</li>
+                    <li>LinkedIn: <a href="https://linkedin.com/in/jdbarra01" target="_blank">linkedin.com/in/jdbarra01</a></li>
+                    <li>GitHub: <a href="https://github.com/jdbarra01" target="_blank">github.com/jdbarra01</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © 2025 José Daniel Barra
+    </footer>
+
+    <script>
+        // Función para secciones colapsables
+        function toggleSection(el) {
+            const content = el.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
