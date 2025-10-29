@@ -1,338 +1,53 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>José Daniel Barra - QA Automation Leader | Framework Architect</title>
+<section class="experience">
+    <h2><i class="fas fa-briefcase"></i> Experiencia Profesional</h2>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a2e0b1b6f4.js" crossorigin="anonymous"></script>
-
-  <style>
-    :root {
-      --primary: #00b4d8;
-      --secondary: #48cae4;
-      --accent: #ffb703; /* Nuevo color de acento */
-      --bg-dark: #0f172a;
-      --bg-card: rgba(255, 255, 255, 0.05);
-      --text-light: #e2e8f0;
-      --text-gray: #94a3b8;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-
-    body {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: var(--text-light);
-      padding: 40px 0;
-    }
-
-    .container {
-      max-width: 1000px; /* Aumento de ancho */
-      margin: auto;
-      background: var(--bg-card);
-      border-radius: 20px;
-      backdrop-filter: blur(12px);
-      padding: 50px; /* Más padding */
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra más intensa */
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-      border-bottom: 2px solid var(--secondary);
-      padding-bottom: 20px;
-    }
-
-    header h1 {
-      font-size: 3rem; /* Tamaño más grande */
-      color: var(--primary);
-      font-weight: 800; /* Más peso */
-      letter-spacing: 2px;
-    }
-
-    header p.role {
-      font-size: 1.3rem; /* Más grande */
-      color: var(--accent); /* Color de acento */
-      margin-top: 8px;
-      font-weight: 600;
-    }
-
-    header .contact {
-      margin-top: 15px;
-      color: var(--text-gray);
-      font-size: 1rem; /* Más grande */
-    }
-
-    header .contact i {
-      color: var(--secondary);
-      margin-right: 5px;
-    }
-
-    .content-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr; /* Experiencia a la izquierda, Habilidades a la derecha */
-      gap: 40px;
-    }
-
-    section {
-      margin-bottom: 30px;
-    }
-
-    section h2 {
-      font-size: 1.6rem;
-      color: var(--primary);
-      border-left: 5px solid var(--accent); /* Color de acento */
-      padding-left: 12px;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-weight: 700;
-    }
-
-    .profile p {
-      margin-bottom: 18px;
-      line-height: 1.8;
-      color: var(--text-light);
-      font-size: 1rem;
-    }
-    
-    .profile p strong {
-      color: var(--secondary);
-    }
-
-    .card {
-      background: rgba(255,255,255,0.03);
-      border-radius: 12px;
-      padding: 20px 25px;
-      margin-bottom: 25px;
-      border-left: 5px solid var(--primary);
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    .card:hover {
-      background: rgba(255,255,255,0.08);
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
-
-    .card h3 {
-      font-size: 1.25rem;
-      color: var(--secondary);
-      margin-bottom: 5px;
-    }
-
-    .card p.time {
-      color: var(--accent);
-      font-size: 0.95rem;
-      font-style: italic;
-      margin-bottom: 15px;
-    }
-    
-    .card ul {
-      padding-left: 15px;
-      margin-top: 10px;
-    }
-
-    .card ul li {
-      margin-bottom: 8px;
-      line-height: 1.5;
-      color: var(--text-light);
-      font-size: 0.95rem;
-    }
-
-    ul.skill-list {
-        list-style: none;
-        padding-left: 0;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .skill-list li {
-        background-color: var(--primary);
-        color: var(--bg-dark);
-        padding: 6px 15px;
-        border-radius: 20px;
-        font-weight: 600;
-        font-size: 0.85rem;
-        transition: background-color 0.3s;
-    }
-    
-    .skill-list li:hover {
-        background-color: var(--secondary);
-    }
-    
-    /* Para listas dentro de la experiencia */
-    .experience ul li::before {
-      content: "⭐";
-      color: var(--accent);
-      margin-right: 8px;
-    }
-    
-    /* Para listas dentro de proyectos/educación (puntos) */
-    .projects ul li::before, .education ul li::before {
-      content: "▹";
-      color: var(--secondary);
-      margin-right: 8px;
-    }
-    
-    .education .card h3 {
-        font-size: 1.1rem;
-    }
-    
-    .education .card p {
-        color: var(--text-gray);
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--text-gray);
-      margin-top: 40px;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding-top: 20px;
-    }
-
-    @media (max-width: 900px) {
-      .content-grid {
-        grid-template-columns: 1fr;
-      }
-      .container {
-        padding: 30px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="container">
-
-    <header>
-      <h1>JOSÉ DANIEL BARRA</h1>
-      <p class="role">QA AUTOMATION LEADER | FRAMEWORK ARCHITECT | DEVOPS ENTHUSIAST</p>
-      <p class="contact">
-        <i class="fas fa-envelope"></i> jose.barra@example.com &nbsp; | &nbsp;
-        <i class="fas fa-phone"></i> +56 9 1234 5678 &nbsp; | &nbsp;
-        <i class="fab fa-linkedin"></i> linkedin.com/in/josedanielbarra &nbsp; | &nbsp;
-        <i class="fab fa-github"></i> github.com/josedbarra
-      </p>
-    </header>
-
-    <section class="profile">
-      <h2><i class="fas fa-rocket"></i> Perfil Ejecutivo</h2>
-      <p>
-        <strong>Ingeniero Líder en Automatización QA</strong> con <strong>10+ años</strong> de trayectoria, especializado en el diseño e implementación de estrategias de **Calidad Continua** y **Arquitectura de Frameworks Escalables** para ecosistemas de **Microservicios (API)**, **Web** y **Mobile**.
-      </p>
-      <p>
-        Mi valor reside en la capacidad de **transformar el testing en un activo de desarrollo** (Shift-Left) mediante la integración de **DevOps (CI/CD)** y la aplicación de **métricas clave (KPIs)**. Logré una **reducción del 40%** en el tiempo de ciclo de regresión y aumenté la **cobertura de pruebas críticas al 95%** en entornos de alta transaccionalidad (Banca/Fintech y Retail).
-      </p>
-      <p>
-        Busco una posición de **liderazgo estratégico** para impulsar la **madurez de QA** e implementar soluciones de **automatización asistidas por IA/ML** que garanticen la excelencia y la velocidad de entrega en un entorno de **entrega continua (Continuous Delivery)**.
-      </p>
-    </section>
-    
-    <div class="content-grid">
-      <div>
-        <section class="experience">
-          <h2><i class="fas fa-briefcase"></i> Experiencia Profesional</h2>
-
-          <div class="card">
-            <h3>Líder de Automatización QA | Arquitecto de Frameworks - Banco Estado (Fintech)</h3>
-            <p class="time">2021 - Presente</p>
-            <ul>
-              <li>**Liderazgo de Excelencia:** Dirigí y gestioné un equipo de **8 QA Engineers**, elevando el nivel técnico y la productividad en un 30% mediante mentoría en patrones de diseño (Page Object Model, Screenplay).</li>
-              <li>**Impacto en el Ciclo:** Reduje el **tiempo de ejecución de las pruebas de regresión en un 40%** al implementar un **Framework Híbrido** basado en Java/TestNG, optimizado para pruebas **Web (Selenium/Playwright)** y **API (Rest-Assured)**.</li>
-              <li>**DevOps/CI-CD:** Diseñé e implementé la integración de pruebas automatizadas en los pipelines de **Jenkins y GitLab CI**, asegurando la ejecución automática en cada *merge* con reportes en tiempo real (**Allure Reports**).</li>
-              <li>**Estrategia de API Testing:** Lideré la automatización del 100% de los servicios de microservicios bancarios (Core Banking), garantizando la calidad en la capa de integración más crítica.</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>QA Automation Engineer Senior - Walmart Tech (E-commerce)</h3>
-            <p class="time">2017 - 2021</p>
-            <ul>
-              <li>**Automatización Mobile:** Desarrollé la suite E2E para la aplicación de E-commerce móvil (iOS/Android) utilizando **Appium** y un entorno de **Selenium Grid/Docker** para la ejecución paralela.</li>
-              <li>**Optimización de Procesos:** Mejoré el pipeline de pruebas en un 35% a través de la refactorización de scripts y la implementación de una estrategia de **Testing Data Management (TDM)** robusta.</li>
-              <li>**Calidad Continua:** Implementé pruebas de aceptación y *smoke tests* integradas a los entornos de *staging* para validar el despliegue automático antes de pasar a producción.</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="projects">
-          <h2><i class="fas fa-cogs"></i> Proyectos de Arquitectura y Logros</h2>
-
-          <div class="card">
-            <ul>
-              <li>**Framework Modular para Microservicios:** Arquitectura de pruebas desacoplada con **Rest-Assured, Kotlin y Gradle**, que permite un *onboarding* de nuevos servicios en menos de 1 hora.</li>
-              <li>**Infraestructura de Pruebas con Docker:** Implementación de un ambiente de pruebas efímero (Test Environment as a Code) utilizando **Docker-Compose y Kubernetes** para pruebas móviles y web en paralelo.</li>
-              <li>**Métricas de Calidad Avanzadas:** Configuración de un dashboard de calidad con **Prometheus y Grafana** para la monitorización en tiempo real de la cobertura, la tasa de fallos y el tiempo de ciclo (Lead Time).</li>
-            </ul>
-          </div>
-        </section>
-      </div>
-
-      <div>
-        <section class="skills">
-          <h2><i class="fas fa-tools"></i> Habilidades Técnicas (Hard Skills)</h2>
-          <ul class="skill-list">
-            <li>Java/Kotlin/Python</li>
-            <li>Selenium WebDriver</li>
-            <li>Playwright/Cypress</li>
-            <li>Appium/Espresso</li>
-            <li>Rest-Assured/Postman</li>
-            <li>JUnit/TestNG/Cucumber</li>
-            <li>CI/CD (Jenkins, GitLab CI)</li>
-            <li>Docker/Kubernetes</li>
-            <li>Allure/Grafana/Prometheus</li>
-            <li>Agile/Scrum/Kanban</li>
-            <li>BDD/TDD</li>
-            <li>SQL/NoSQL</li>
-          </ul>
-        </section>
-        
-        <section class="education">
-          <h2><i class="fas fa-graduation-cap"></i> Educación y Certificaciones</h2>
-
-          <div class="card">
-            <h3>Diplomado en Gestión de la Innovación y Transformación Digital</h3>
-            <p>Universidad de Chile - 2023</p>
-          </div>
-          
-          <div class="card">
-            <h3>Certified QA Automation Lead (CQAL)</h3>
-            <p>ISTQB - 2024 (Pendiente)</p>
-          </div>
-
-          <div class="card">
-            <h3>Ingeniería en Informática</h3>
-            <p>Duoc UC - Titulado 2012</p>
-          </div>
-        </section>
-        
-        <section class="soft-skills">
-          <h2><i class="fas fa-handshake"></i> Liderazgo y Soft Skills</h2>
-          <ul>
-            <li>Visión Estratégica de QA</li>
-            <li>Mentoría y Desarrollo de Equipos</li>
-            <li>Comunicación Inter-funcional (Devs, POs)</li>
-            <li>Resolución Proactiva de Problemas</li>
-            <li>Gestión de Stakeholders</li>
-          </ul>
-        </section>
-      </div>
+    <div class="card">
+        <h3>QA Lead de Automatización - Banco Ripley (Fintech)</h3>
+        <p class="time">mar. 2021 - oct. 2025</p>
+        <ul>
+            <li>**Liderazgo Estratégico:** Diseñé y lideré con éxito la implementación de un Framework de Automatización E2E para API, Web y Móvil, alcanzando una **cobertura de pruebas superior al 85%** en el sitio transaccional.</li>
+            <li>**Eficiencia en CI/CD:** Establecí y optimicé procesos de **Integración Continua (CI/CD)**, reduciendo en un **70% el tiempo de retroalimentación** post-despliegue.</li>
+            <li>**Calidad Crítica:** Estandaricé los procedimientos de certificación de calidad para el sitio transaccional, lo que resultó en una **mejora significativa en la detección de defectos** críticos antes del Go-Live.</li>
+            <li>**Gestión de Equipos:** Lideré y formé a un equipo de más de 12 automatizadores en Chile y Perú, fomentando la excelencia en prácticas de codificación y la adopción de metodologías Agile.</li>
+        </ul>
     </div>
 
-    <footer>
-      © 2025 José Daniel Barra — Perfil optimizado para ATS y visibilidad estratégica.
-    </footer>
-  </div>
-</body>
-</html>
+    <div class="card">
+        <h3>QA Lead de Automatizador - Tata Consultancy Services (TCS)</h3>
+        <p class="time">jun. 2019 - mar. 2021</p>
+        <ul>
+            <li>**Arquitectura de Automatización:** Liderazgo en el proyecto de automatización para Transbank, con enfoque en la creación de una **arquitectura robusta** y la definición de estándares de código para asegurar la **escalabilidad y mantenibilidad** de los scripts.</li>
+            <li>**Automatización Multi-Plataforma:** Implementación exitosa de soluciones de automatización para pruebas Web utilizando **Selenium**, pruebas móviles con **Appium** y pruebas de API mediante **Postman**.</li>
+            <li>**Mejora de la Eficiencia:** Logré un **incremento en la eficiencia de las pruebas funcionales de más del 50%** en la plataforma bancaria.</li>
+            <li>**Formación Interna:** Diseño y ejecución de programas de capacitación en Automatización para equipos internos, especializándome en la transferencia de conocimientos y habilidades en Selenium WebDriver y Appium.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Consultor Automatizador - TSOFT Chile</h3>
+        <p class="time">ene. 2018 - jun. 2019</p>
+        <ul>
+            <li>Diseñé y desarrollé scripts de automatización utilizando **Selenium, Appium y UFT** para optimizar procesos de pruebas funcionales en múltiples clientes.</li>
+            <li>**Consultoría Bancaria:** Participé en proyectos de automatización para clientes de alto perfil como **Banco de Crédito e Inversiones, Banco de Chile y BNP-Cardif**, asegurando la satisfacción del cliente y la entrega oportuna.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Ingeniero Automatizador - SOFTLAND Chile</h3>
+        <p class="time">ene. 2015 - ene. 2018</p>
+        <ul>
+            <li>Diseñé y desarrollé scripts de automatización utilizando las herramientas **QuickTest Professional (QTP)** y **Unified Functional Testing (UFT)**.</li>
+            <li>Implementé metodologías de desarrollo **VBScript y .Net** para la creación de soluciones de automatización robustas y confiables.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Jefe de Proyecto - VALOR REAL</h3>
+        <p class="time">dic. 2013 - ene. 2015</p>
+        <ul>
+            <li>**Liderazgo de Proyectos:** Lideré con éxito el proyecto de implementación de la nueva Intranet corporativa en Banco Estado.</li>
+            <li>**Coordinación Multi-disciplinar:** Coordiné equipos multidisciplinarios para el desarrollo e integración de funcionalidades de la Intranet, asegurando el cumplimiento de los objetivos del proyecto.</li>
+            <li>**Gestión del Ciclo de Vida:** Supervisé la planificación y ejecución de las fases del proyecto, incluyendo el diseño, desarrollo, pruebas y despliegue de la plataforma.</li>
+        </ul>
+    </div>
+</section>
