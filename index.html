@@ -1,22 +1,135 @@
-<div class="profile bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg border border-white/20">
-  <h2 class="text-2xl font-semibold text-blue-400 mb-3 flex items-center gap-2">
-    <i class="fas fa-user-cog text-blue-500"></i> Sobre mí
-  </h2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV Interactivo - José Daniel Barra</title>
 
-  <p class="text-gray-100 leading-relaxed mb-3">
-    Soy un <strong>Ingeniero Líder en Automatización QA y Arquitectura de Frameworks</strong> con más de una década de experiencia diseñando y ejecutando estrategias de automatización para 
-    <strong>aplicaciones Web, Móviles y API</strong> en proyectos de gran envergadura.
-  </p>
+  <!-- Fuente e íconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0b1b6f4.js" crossorigin="anonymous"></script>
 
-  <p class="text-gray-100 leading-relaxed mb-3">
-    He <strong>liderado equipos técnicos</strong>, diseñado frameworks <strong>E2E integrados con CI/CD</strong> y aplicado metodologías 
-    <strong>Agile (Scrum y Kanban)</strong> para elevar la calidad, eficiencia y velocidad de entrega del software. 
-    Mi experiencia ha permitido reducir significativamente los <strong>tiempos de lanzamiento al mercado</strong> en sectores de alta transaccionalidad como 
-    <strong>Banca y Retail</strong>.
-  </p>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <p class="text-gray-100 leading-relaxed">
-    Actualmente busco una <strong>posición estratégica</strong> donde pueda impulsar la <strong>excelencia en software</strong> mediante la implementación de 
-    <strong>soluciones de automatización robustas, escalables y efectivas</strong>.
-  </p>
-</div>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #0f172a, #1e293b);
+      color: #f1f5f9;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 1.5rem;
+      padding: 2rem;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    }
+    h2 {
+      border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Encabezado -->
+    <header class="text-center mb-8">
+      <h1 class="text-4xl font-semibold text-blue-400">José Daniel Barra</h1>
+      <p class="text-gray-300">Ingeniero Líder en Automatización QA | Arquitectura de Frameworks</p>
+      <p class="text-gray-400 mt-2 text-sm">
+        <i class="fas fa-envelope"></i> jose.barra@example.com &nbsp; | &nbsp;
+        <i class="fas fa-phone"></i> +56 9 1234 5678 &nbsp; | &nbsp;
+        <i class="fab fa-linkedin"></i> linkedin.com/in/josedanielbarra
+      </p>
+    </header>
+
+    <!-- Sección Perfil -->
+    <div class="profile bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg border border-white/20 mb-10">
+      <h2 class="text-2xl font-semibold text-blue-400 mb-3 flex items-center gap-2">
+        <i class="fas fa-user-cog text-blue-500"></i> Sobre mí
+      </h2>
+
+      <p class="text-gray-100 leading-relaxed mb-3">
+        Soy un <strong>Ingeniero Líder en Automatización QA y Arquitectura de Frameworks</strong> con más de una década de experiencia diseñando y ejecutando estrategias de automatización para 
+        <strong>aplicaciones Web, Móviles y API</strong> en proyectos de gran envergadura.
+      </p>
+
+      <p class="text-gray-100 leading-relaxed mb-3">
+        He <strong>liderado equipos técnicos</strong>, diseñado frameworks <strong>E2E integrados con CI/CD</strong> y aplicado metodologías 
+        <strong>Agile (Scrum y Kanban)</strong> para elevar la calidad, eficiencia y velocidad de entrega del software. 
+        Mi experiencia ha permitido reducir significativamente los <strong>tiempos de lanzamiento al mercado</strong> en sectores de alta transaccionalidad como 
+        <strong>Banca y Retail</strong>.
+      </p>
+
+      <p class="text-gray-100 leading-relaxed">
+        Actualmente busco una <strong>posición estratégica</strong> donde pueda impulsar la <strong>excelencia en software</strong> mediante la implementación de 
+        <strong>soluciones de automatización robustas, escalables y efectivas</strong>.
+      </p>
+    </div>
+
+    <!-- Experiencia -->
+    <section class="experience mb-10">
+      <h2 class="text-2xl font-semibold text-blue-400 mb-4 flex items-center gap-2">
+        <i class="fas fa-briefcase text-blue-500"></i> Experiencia Profesional
+      </h2>
+      <div class="mb-4">
+        <h3 class="text-lg font-semibold">Líder de Automatización QA - Banco Estado</h3>
+        <p class="text-gray-400 text-sm">2021 - Presente</p>
+        <ul class="list-disc list-inside text-gray-200 mt-2">
+          <li>Diseño e implementación de frameworks híbridos para pruebas Web y API.</li>
+          <li>Integración con Jenkins, GitLab CI y reportes automáticos con Allure.</li>
+          <li>Gestión y capacitación de un equipo de 8 QA Engineers en metodologías ágiles.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold">QA Automation Engineer - Walmart Tech</h3>
+        <p class="text-gray-400 text-sm">2017 - 2021</p>
+        <ul class="list-disc list-inside text-gray-200 mt-2">
+          <li>Automatización de flujos críticos en aplicaciones móviles con Appium y Selenium Grid.</li>
+          <li>Optimización del pipeline de pruebas reduciendo un 35% los tiempos de ejecución.</li>
+          <li>Implementación de pruebas E2E con integración a entornos de staging.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Educación -->
+    <section class="education mb-10">
+      <h2 class="text-2xl font-semibold text-blue-400 mb-4 flex items-center gap-2">
+        <i class="fas fa-graduation-cap text-blue-500"></i> Educación
+      </h2>
+      <div class="mb-4">
+        <h3 class="text-lg font-semibold">Ingeniería en Informática</h3>
+        <p class="text-gray-400 text-sm">Duoc UC - Titulado 2012</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold">Diplomado en Gestión de la Innovación y Transformación Digital</h3>
+        <p class="text-gray-400 text-sm">Universidad de Chile - 2023</p>
+      </div>
+    </section>
+
+    <!-- Proyectos destacados -->
+    <section class="projects mb-10">
+      <h2 class="text-2xl font-semibold text-blue-400 mb-4 flex items-center gap-2">
+        <i class="fas fa-project-diagram text-blue-500"></i> Proyectos Destacados
+      </h2>
+      <ul class="list-disc list-inside text-gray-200">
+        <li>Framework modular para automatización de microservicios REST con Rest-Assured y Gradle.</li>
+        <li>Implementación de pruebas móviles paralelas con Appium, Selenium Grid y Docker.</li>
+        <li>Integración de reportes de métricas QA en dashboards con Grafana y Prometheus.</li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-400 text-sm mt-8">
+      <p>© 2025 José Daniel Barra — Todos los derechos reservados</p>
+    </footer>
+  </div>
+</body>
+</html>
